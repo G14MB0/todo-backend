@@ -1,8 +1,8 @@
 from typing import Optional
 import json
 
-from pydantic import BaseModel, EmailStr #used as an isistance() to check data type
-from datetime import datetime
+from pydantic import BaseModel, EmailStr, validator #used as an isistance() to check data type
+from datetime import date, datetime
 
 
 ######################################################
@@ -66,7 +66,7 @@ class TokenData(BaseModel):
 
 class TodoCreate(BaseModel):
     text: str
-    dueDate: datetime
+    dueDate: Optional[date] = None
 
 
 class TodoResponse(TodoCreate):
@@ -75,6 +75,13 @@ class TodoResponse(TodoCreate):
     important: bool
     owner_id: int
     created_at: datetime
+
+
+class TodoUpdate(BaseModel):
+    text: Optional[str] = None
+    important: Optional[bool] = None
+    done: Optional[bool] = None
+    dueDate: Optional[date] = None
 
 
 class TodoToggleDone(BaseModel):

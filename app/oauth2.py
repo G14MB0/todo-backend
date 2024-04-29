@@ -28,7 +28,7 @@ oaut2_scheme = OAuth2PasswordBearer(tokenUrl=tokenUrl)  ## this must coincide wi
 
 #SECRET_KEY
 #Algorithm
-#Expiration time
+#Expiration time, added as "exp" key in token payloads will be used by jwt.decode() to check for freshness
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes

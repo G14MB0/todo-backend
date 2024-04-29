@@ -5,7 +5,7 @@ models are defined as classes and columns as attributes
 '''
 
 from sqlalchemy import Column, Integer, String, ForeignKey, UniqueConstraint, Boolean
-from sqlalchemy.sql.sqltypes import TIMESTAMP
+from sqlalchemy.sql.sqltypes import TIMESTAMP, DATE
 from sqlalchemy.sql.expression import text as txt
 from sqlalchemy.orm import relationship
 
@@ -30,7 +30,7 @@ class Todo(Base):
 
     id = Column(Integer, primary_key=True)
     text = Column(String, nullable=False) #Using content insted of "text" since text is a function
-    dueDate = Column(TIMESTAMP(timezone=True), nullable=True)
+    dueDate = Column(DATE(), nullable=True)
     done = Column(Boolean, nullable=False, default=False)
     important = Column(Boolean, nullable=False, default=False)
     owner_id = Column(Integer, ForeignKey('users.id', ondelete="CASCADE"), nullable=False)

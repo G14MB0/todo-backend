@@ -59,7 +59,7 @@ def login(user_credentials: OAuth2PasswordRequestForm = Depends(), db: Session =
     # user = schemas.UserLogin.parse_obj(user) #this convert the RealDictRow to use as user.pass etc
 
     if not user:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid Credentials")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"User with email {user_credentials.username} not found")
 
     if not utils.verifyPassword(user_credentials.password, user.password):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid Credentials")
