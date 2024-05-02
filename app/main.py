@@ -15,7 +15,7 @@ from contextlib import asynccontextmanager
 
 
 
-# This bind the database with the models (creating the tables if not present and all the stuff). no need for this if using Alembic 
+# This bind the database with the models (creating the tables if not present and all the stuff). no need for this if using Alembic (but can still be leaved for auto db creation)
 models.Base.metadata.create_all(bind=engine) 
 
 
