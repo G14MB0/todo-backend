@@ -8,7 +8,7 @@ services:
     # env_file: # Use env_file in case an .env file is present
     #   - ./.env
     environment:  # Use in case of hard coded variable in this container
-      - SECRET_KEY = c38777d1619a83b0ee9e6e23868bb47b29f81875090a0b5d4e607263df35fec1
-      - ALGORITHM = HS256
-      - access_token_expire_minutes = 300
-      - DATABASE_NAME = todo-db
+      - SECRET_KEY=c38777d1619a83b0ee9e6e23868bb47b29f81875090a0b5d4e607263df35fec1
+      - ALGORITHM=HS256
+      - access_token_expire_minutes=300
+      - DATABASE_NAME=todo-db
