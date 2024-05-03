@@ -22,7 +22,6 @@ Thumbs.db  # For Windows
 
 # Build artifacts
 build/
-dist/
 *.egg-info/
 
 # Log files
