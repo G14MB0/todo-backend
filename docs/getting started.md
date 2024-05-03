@@ -1,10 +1,5 @@
 # TODO APP BACKEND
 
-## Table of Contents
-- [CAPABILITIES](#CAPABILITIES)
-- [WHAT COMES WITH THE APP](#WHAT-COMES-WITH-THE-APP)
-- [HOW TO RUN THE APPLICATION](#HOW-TO-RUN-THE-APPLICATION)
-
 ## CAPABILITIES
 This application is able to serve a multi-user "todo" tasks creation and managing interface.
 All the tasks are user specific and the app lets the user:
@@ -40,6 +35,7 @@ This app can be run locally in different ways, here are two easy ones:
 
 - Python (> 3.8)
 - Pip
+- **!!create .env file in root folder!!** --> see here [Environment file](environment%20file.md)
 
 **Procedure**:
 
@@ -49,7 +45,7 @@ This app can be run locally in different ways, here are two easy ones:
     pip install -r .\requirements.txt
 
 - Run the main.py file (with global environment or venv, accordingly). Here is how to run with a global interpreter:    
-    `python ./main.py`
+    `python ./main.py`33
 
 ### Method 2, using Docker
 The app comes with a Dockerfile and a docker-compose file. You can create your image to run the app inside a container.
