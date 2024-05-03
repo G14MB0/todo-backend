@@ -40,6 +40,7 @@ This app can be run locally in different ways, here are two easy ones:
 **Requirements**:
 - Python (> 3.8)
 - Pip
+- **!!create .env file in root folder!!** --> see here ("./docs/environment file.md")
 
 **Procedure**:
 - Clone the repo locally (or download as a zip and then unzip).
