@@ -36,6 +36,11 @@ Also the documentation is served as a static file at "/mkdocs/". **IT'S IMPORTAN
 ## HOW TO RUN THE APPLICATION
 This app can be run locally in different ways, here are two easy ones:
 
+*after run the app, go to:*
+- *127.0.0.1:5174 to render the frontend*
+- *127.0.0.1:5174/mkdocs/ to render the docs*
+- *127.0.0.1:5174/docs/ to render the API docs*
+
 ### Method 1, using interpreter
 **Requirements**:
 - Python (> 3.8)
