@@ -35,7 +35,7 @@ def get_data(db: Session = Depends(get_db), current_user: int = Depends(oauth2.g
 @router.get("/bydate", response_model=List[schemas.TodoResponse])
 def get_todo_by_date(db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user), 
              start: datetime = datetime.now(), 
-             end: datetime | None = None):
+             end: Optional[datetime] = None):
     """Get all todo for current user filtered by dueDate
 
     **if no starting date is provided, the actual time is used 
